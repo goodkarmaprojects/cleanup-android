@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Clean Up</string>
+    <string name="title_login">Login</string>
+    <string name="title_home">Home</string>
 </resources>
