@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loginGraph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.goodkarmaprojects.feature.login.LoginFragment">
+
+<!--        <action-->
+<!--            android:id="@+id/action_onboardingFragment_to_newloginFragment"-->
+<!--            app:destination="@id/socialLoginFragment"-->
+<!--            app:popUpTo="@id/splashFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_onboardingFragment_to_classicloginFragment"-->
+<!--            app:destination="@id/loginFragment"-->
+<!--            app:popUpTo="@id/splashFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+
+    </fragment>
+
+</navigation>
