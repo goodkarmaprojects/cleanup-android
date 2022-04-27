@@ -5,7 +5,12 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="feature/home/src/main/res/layout/fragment_home.xml" value="0.165625" />
-        <entry key="feature/login/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="feature/login/src/main/res/drawable/wavy_logo.xml" value="0.1" />
+        <entry key="feature/login/src/main/res/layout/forgotten_password_dialog.xml" value="0.21717325846354166" />
+        <entry key="feature/login/src/main/res/layout/fragment_login.xml" value="0.29237947122861585" />
+        <entry key="feature/login/src/main/res/layout/fragment_register.xml" value="0.1360544217687075" />
+        <entry key="feature/login/src/main/res/layout/login_verify_email_dialog.xml" value="0.15104166666666666" />
+        <entry key="feature/login/src/main/res/layout/register_verify_email_dialog.xml" value="0.15104166666666666" />
       </map>
     </option>
   </component>

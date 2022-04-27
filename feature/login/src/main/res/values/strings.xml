@@ -1,4 +1,34 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello Login fragment</string>
+    <string name="login_invalid_email_error">Error: Wrong email</string>
+    <string name="login_invalid_password_error">Error: Wrong password</string>
+    <string name="login_invalid_device_blocked">Error: Too many tries, try again later</string>
+    <string name="login_invalid_email_bad_format">Error: Email badly formatted</string>
+    <string name="login_invalid_mandatory">Error: Fields can not be blank</string>
+    <string name="login_error">Login error</string>
+    <string name="register_error_password_not_match">Error. Passwords don\'t match</string>
+    <string name="register_error_password_blank_name">Error. Name is mandatory</string>
+    <string name="register_error_password_length">Error. Password must have at least 6 characters</string>
+    <string name="login_error_email_not_verified">Error. Your account is not verified yet, please check you email inbox</string>
+
+    <string name="doNotHaveAccount">Don\'t you have an account?</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="forgottenPassword"><u>Have you forgotten your password?</u></string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="byGoodKarmaProjects">by GoodKarmaProjects</string>
+    <string name="name">Name</string>
+    <string name="rePassword">Re-Password</string>
+    <string name="login_error_resend_link">Error resending the verify account link.</string>
+    <string name="login_success_resend_link">Link successfully sent. Check your email inbox.</string>
+    <string name="account_not_verified_title">Account not verified</string>
+    <string name="account_not_verified_description">Your account is not verified. Check your email inbox or resend a new verification link.</string>
+    <string name="account_not_verified_close">Close</string>
+    <string name="account_not_verified_resend">Resend code</string>
+    <string name="accept_terms_and_conditions">I accept </string>
+    <string name="text_terms_and_conditions"><u>terms and conditions</u></string>
+    <string name="reset_password_title">Reset password</string>
+    <string name="reset_password_description">Enter your email address. You will receive a password reset link on the email you use to login.</string>
+    <string name="reset_password_success">We have sent you an email to reset your password. Check your email inbox.</string>
+    <string name="register_mail_already_exists">Error. This email address is already in use</string>
 </resources>

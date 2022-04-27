@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="LoginInputText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_login_color</item>
+        <item name="boxCornerRadiusBottomEnd">50dp</item>
+        <item name="boxCornerRadiusTopStart">50dp</item>
+        <item name="boxCornerRadiusBottomStart">50dp</item>
+        <item name="boxCornerRadiusTopEnd">50dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">0.5dp</item>
+    </style>
+
+    <style name="LoginInputTextEdit">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+</resources>

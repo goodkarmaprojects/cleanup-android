@@ -18,3 +18,7 @@ rootProject.name = "Clean Up"
 include ':app'
 include ':feature:login'
 include ':feature:home'
+include ':core:network'
+include ':core:uifeedback'
+include ':core:resourceprovider'
+include ':core:uicommons'

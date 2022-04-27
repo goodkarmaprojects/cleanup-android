@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.login.LoginFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="org.goodkarmaprojects.feature.login.presentation.register.RegisterViewModel" />
+
+        <variable
+            name="legalClickListener"
+            type="android.view.View.OnClickListener"  />
+
+        <variable
+            name="backClickListener"
+            type="android.view.View.OnClickListener"  />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_arrow_back"
+            android:onClick="@{backClickListener}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/guide50h"
+            app:layout_constraintBottom_toBottomOf="@id/guide50h">
+
+            <TextView
+                android:id="@+id/registerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="@string/register"
+                android:textColor="@color/light_grey"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="@id/guide15h"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameInputLayout"
+                style="@style/LoginInputText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="@id/guide85v"
+                app:layout_constraintStart_toStartOf="@id/guide15v"
+                app:layout_constraintTop_toBottomOf="@id/registerText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginNameEdt"
+                    style="@style/LoginInputTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.name}"
+                    android:maxLines="1"
+                    android:paddingStart="32dp"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailInputLayout"
+                style="@style/LoginInputText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/nameInputLayout"
+                app:layout_constraintEnd_toEndOf="@id/guide85v"
+                app:layout_constraintStart_toStartOf="@id/nameInputLayout"
+                tools:layout_editor_absoluteY="307dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_email_edt"
+                    style="@style/LoginInputTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:text="@={viewModel.email}"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingStart="32dp"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordInputLayout"
+                style="@style/LoginInputText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@id/guide85v"
+                app:layout_constraintStart_toStartOf="@id/guide15v"
+                app:layout_constraintTop_toBottomOf="@id/emailInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_pass_edt"
+                    style="@style/LoginInputTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:text="@={viewModel.password}"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingStart="32dp"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rePasswordInputLayout"
+                style="@style/LoginInputText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@id/guide85v"
+                app:layout_constraintStart_toStartOf="@id/guide15v"
+                app:layout_constraintTop_toBottomOf="@id/passwordInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginRePassEdt"
+                    style="@style/LoginInputTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/rePassword"
+                    android:text="@={viewModel.rePassword}"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingStart="32dp"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/termsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/guide15v"
+                app:layout_constraintTop_toBottomOf="@id/rePasswordInputLayout">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_grey"
+                    android:layout_marginEnd="4dp"
+                    android:checked="@={viewModel.termsConditionsChecked}"
+                    android:text="@string/accept_terms_and_conditions"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary"
+                    android:onClick="@{legalClickListener}"
+                    android:text="@string/text_terms_and_conditions"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:backgroundTint="#1AFFFFFF"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="2"
+                android:text="@string/register"
+                android:textColor="@{viewModel.termsConditionsChecked ? @color/white : @color/white_transparent}"
+                android:textSize="16sp"
+                app:cornerRadius="50dp"
+                android:enabled="@{viewModel.termsConditionsChecked}"
+                app:layout_constraintEnd_toEndOf="@id/guide85v"
+                app:layout_constraintStart_toStartOf="@id/guide15v"
+                app:layout_constraintTop_toBottomOf="@id/termsAndConditions"
+                app:strokeWidth="0dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide15h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide95h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".92" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide15v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide85v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".90" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide50h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".50" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

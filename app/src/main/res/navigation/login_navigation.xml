@@ -6,20 +6,49 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="org.goodkarmaprojects.feature.login.LoginFragment">
+        android:name="org.goodkarmaprojects.feature.login.presentation.login.LoginFragment">
 
-<!--        <action-->
-<!--            android:id="@+id/action_onboardingFragment_to_newloginFragment"-->
-<!--            app:destination="@id/socialLoginFragment"-->
-<!--            app:popUpTo="@id/splashFragment"-->
-<!--            app:popUpToInclusive="true" />-->
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeGraph"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
 
-<!--        <action-->
-<!--            android:id="@+id/action_onboardingFragment_to_classicloginFragment"-->
-<!--            app:destination="@id/loginFragment"-->
-<!--            app:popUpTo="@id/splashFragment"-->
-<!--            app:popUpToInclusive="true" />-->
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
 
+        <action
+            android:id="@+id/action_loginFragment_to_loginVerifyEmailDialog"
+            app:destination="@id/loginVerifyEmailDialog" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_forgottenPasswordDialog"
+            app:destination="@id/forgottenPasswordDialog" />
     </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="org.goodkarmaprojects.feature.login.presentation.register.RegisterFragment">
+
+        <action
+            android:id="@+id/action_registerFragment_to_registerVerifyEmailDialog"
+            app:destination="@id/registerVerifyEmailDialog" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/loginVerifyEmailDialog"
+        android:name="org.goodkarmaprojects.feature.login.presentation.login.dialog.LoginVerifyEmailDialog">
+    </dialog>
+
+    <dialog
+        android:id="@+id/registerVerifyEmailDialog"
+        android:name="org.goodkarmaprojects.feature.login.presentation.register.dialog.RegisterVerifyEmailDialog">
+    </dialog>
+
+    <dialog
+        android:id="@+id/forgottenPasswordDialog"
+        android:name="org.goodkarmaprojects.feature.login.presentation.login.dialog.ForgottenPasswordDialog">
+    </dialog>
 
 </navigation>
